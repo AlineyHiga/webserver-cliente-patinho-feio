@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     'rest_framework',          # Django REST Framework para APIs
     'corsheaders',             # Django CORS Headers para permitir CORS (opcional)
     'main',
-    'storages',                    # Nosso aplicativo principal
     'Webserver',  # Registra produtoWebserver para que o Django reconheça os modelos
 ]
 
