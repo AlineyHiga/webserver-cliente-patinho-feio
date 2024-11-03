@@ -135,11 +135,11 @@ REST_FRAMEWORK = {
     ],
 }
 
+CORS_ALLOW_ALL_ORIGINS = True
 # Configurações de CORS (Cross-Origin Resource Sharing)
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', cast=Csv(), default="http://localhost:3000")
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', cast=Csv(), default="http://localhost:3000")
 
 # Configurações para o CORS se precisar permitir acesso de qualquer origem (não recomendado em produção)
-# CORS_ALLOW_ALL_ORIGINS = True
 
 # Configurações de Logs (Opcional)
 LOGGING = {
