@@ -135,10 +135,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-# Configurações de CORS (Cross-Origin Resource Sharing)
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', cast=Csv(), default="http://localhost:3000")
-CORS_ALLOW_ALL_ORIGINS = True
-
 # Configurações para o CORS se precisar permitir acesso de qualquer origem (não recomendado em produção)
 
 # Configurações de Logs (Opcional)
@@ -161,12 +157,13 @@ LOGGING = {
 }
 
 # CORS settings
-CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
+    "https://patinho-feio-do-legume.vercel.app/",
     "http://localhost:8080",
     "http://127.0.0.1:8080",
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Add these settings after REST_FRAMEWORK configuration
 AUTHENTICATION_BACKENDS = [
